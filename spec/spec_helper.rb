@@ -1,7 +1,11 @@
 require 'serverspec'
 require 'docker'
+require 'knapsack'
 
 set :backend, :docker
+
+# Add parallel test support.
+Knapsack::Adapters::RspecAdapter.bind
 
 # Setup Docker URL and certificates if running via a remote Docker Host.
 if ENV['DOCKER_HOST']
