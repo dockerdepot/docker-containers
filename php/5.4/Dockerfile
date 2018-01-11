@@ -3,25 +3,25 @@ FROM dockerdepot/base:centos-7
 MAINTAINER Tarun Bhargav<tarun.bhargav@sitback.com.au>
 
 # Install all packages.
-RUN yum -y --setopt=tsflags=nodocs update  && yum clean all
+RUN yum -y --setopt=tsflags=nodocs update
 
 ## Apache.
-RUN yum -y install httpd  && yum clean all
+RUN yum -y install httpd
 
 ## Memcached.
-RUN yum -y install memcached  && yum clean all
+RUN yum -y install memcached
 
 ## MySQL client.
-RUN yum -y install mariadb  && yum clean all
+RUN yum -y install mariadb
 
 ## mod SSL & openssl
-RUN yum -y install mod_ssl openssl && yum clean all
+RUN yum -y install mod_ssl openssl
 
 # Configure Apache.
 COPY ./conf/httpd/httpd-vhosts.conf /etc/httpd/conf.d/vhosts.conf
 
 # Install & configure PHP.
-RUN yum clean all && yum -y --setopt=tsflags=nodocs update \
+RUN yum -y --setopt=tsflags=nodocs update \
   && yum -y install \
       php \
       php-gd \
@@ -32,6 +32,8 @@ RUN yum clean all && yum -y --setopt=tsflags=nodocs update \
       php-apc \
       php-soap \
       php-pear
+
+RUN yum clean all
 
 # Configure PHP.
 COPY ./conf/php/30-overrides.ini /etc/php.d/30-overrides.ini
