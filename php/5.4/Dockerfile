@@ -21,17 +21,17 @@ RUN yum -y install mod_ssl openssl && yum clean all
 COPY ./conf/httpd/httpd-vhosts.conf /etc/httpd/conf.d/vhosts.conf
 
 # Install & configure PHP.
-RUN yum -y --setopt=tsflags=nodocs update
-RUN yum -y install \
-  php \
-  php-gd \
-  php-devel \
-  php-mcrypt \
-  php-mysql \
-  php-memcached \
-  php-apc \
-  php-soap \
-  php-pear
+RUN yum clean all && yum -y --setopt=tsflags=nodocs update \
+  && yum -y install \
+      php \
+      php-gd \
+      php-devel \
+      php-mcrypt \
+      php-mysql \
+      php-memcached \
+      php-apc \
+      php-soap \
+      php-pear
 
 # Configure PHP.
 COPY ./conf/php/30-overrides.ini /etc/php.d/30-overrides.ini
