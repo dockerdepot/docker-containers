@@ -1,6 +1,5 @@
 # Standard Operating Environment running off PHP 7.2.
 FROM dockerdepot/php:7.2
-MAINTAINER Chinthaka Godawita <chin.godawita@me.com>
 
 # Install all packages.
 RUN apt-get update

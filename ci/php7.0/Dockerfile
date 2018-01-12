@@ -1,6 +1,5 @@
 # PHP 5.6 container, optimised for Continuous Integration.
 FROM dockerdepot/soe:php7.0
-MAINTAINER Chinthaka Godawita <chin@sitback.com.au>
 
 ## MariaDB.
 RUN apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8 && \

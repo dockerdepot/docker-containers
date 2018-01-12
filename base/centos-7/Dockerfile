@@ -1,5 +1,4 @@
 FROM centos:7
-MAINTAINER tarun.bhargav@sitback.com.au
 
 # Increment this to trigger a full rebuild.
 ENV DC_BASE_VERSION 'CentOS-7-1.0.3'

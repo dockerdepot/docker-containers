@@ -1,6 +1,5 @@
 # Base for most of the Docker containers here.
 FROM chinthakagodawita/ubuntu:14.04
-MAINTAINER Chinthaka Godawita <chin@sitback.com.au>
 
 # Increment this to trigger a full rebuild.
 ENV DC_BASE_VERSION 'ubuntu-14.04-3.0.10'

@@ -1,6 +1,5 @@
 # PHP 5.5 container, optimised for Continuous Integration.
 FROM dockerdepot/soe:php5.5
-MAINTAINER Chinthaka Godawita <chin@sitback.com.au>
 
 # Install all packages.
 RUN apt-get update

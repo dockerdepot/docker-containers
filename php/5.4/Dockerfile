@@ -1,6 +1,5 @@
 # PHP 5.4 on Centos container.
 FROM dockerdepot/base:centos-7
-MAINTAINER Tarun Bhargav<tarun.bhargav@sitback.com.au>
 
 # Install all packages.
 RUN yum -y --setopt=tsflags=nodocs update
