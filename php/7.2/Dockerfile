@@ -1,6 +1,5 @@
 # PHP 7.2 container.
 FROM dockerdepot/base:ubuntu-16.04
-MAINTAINER Chinthaka Godawita <chin.godawita@me.com>
 
 # Increment this to trigger a full rebuild.
 ENV DC_PHP_VERSION 'php-7.2-1.0.0'

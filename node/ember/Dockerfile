@@ -1,6 +1,5 @@
 # Container for running/testing EmberJS applications.
 FROM dockerdepot/node:base
-MAINTAINER Chinthaka Godawita <chin@sitback.com.au>
 
 # Google's stable Chrome repos.
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -

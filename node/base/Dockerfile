@@ -1,6 +1,5 @@
 # Base nodejs container.
 FROM dockerdepot/base:ubuntu-16.04
-MAINTAINER Chinthaka Godawita <chin@sitback.com.au>
 
 # Add node 6.x via nodesource.
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -

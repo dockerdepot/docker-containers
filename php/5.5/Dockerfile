@@ -1,6 +1,5 @@
 # PHP 5.5 container.
 FROM dockerdepot/base:ubuntu-14.04
-MAINTAINER Chinthaka Godawita <chin@sitback.com.au>
 
 # Install all packages.
 RUN apt-get update
