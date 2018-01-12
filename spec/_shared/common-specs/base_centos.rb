@@ -3,7 +3,8 @@ require 'serverspec'
 # Tests shared by all images that inherit some version of the base.
 shared_context 'base_centos' do
   let(:base_packages) { [
-    'gcc', 
+    'epel-release',
+    'gcc',
     'gcc-c++',
     'make',
     'openssl-devel',
@@ -38,14 +39,6 @@ shared_context 'base_centos' do
 
   describe command('which vim') do
     its(:stdout) { should match '/usr/bin/vim' }
-  end
-
-  describe yumrepo('epel') do
-    it { should exist }
-  end
-
-  describe yumrepo('epel') do
-    it { should be_enabled }
   end
 
   describe file('/etc/supervisor/conf.d/base.conf') do
