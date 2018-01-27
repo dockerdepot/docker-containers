@@ -2,7 +2,7 @@
 FROM chinthakagodawita/ubuntu:14.04
 
 # Increment this to trigger a full rebuild.
-ENV DC_BASE_VERSION 'ubuntu-14.04-3.0.10'
+ENV DC_BASE_VERSION 'ubuntu-14.04-3.0.11'
 
 # Update repositories and make sure we're on the latest 14.04 release.
 RUN apt-get -y update
