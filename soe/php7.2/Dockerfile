@@ -7,7 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install socat ssmtp
 
 # Install Xdebug alpha manually
 # @TODO: Replace with `php-xdebug` once oerdnj/deb.sury.org#751 is fixed.
-RUN pecl install xdebug-beta \
+RUN pecl install xdebug \
   && echo "zend_extension=xdebug.so" > /etc/php/7.2/mods-available/xdebug.ini \
   && phpenmod -s ALL xdebug
 
