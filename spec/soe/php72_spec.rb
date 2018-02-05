@@ -3,12 +3,7 @@ require 'spec_helper'
 describe 'PHP 7.2 SOE' do
   include_context 'soe' do
     let(:php_version) { '7.2' }
-    # @TODO: Replace with Constants::PHP70_SOE_PACKAGES once xdebug is
-    # installed via apt-get.
-    let(:soe_packages) { [
-      'socat',
-      'ssmtp'
-    ] }
+    let(:soe_packages) { Constants::PHP70_SOE_PACKAGES }
     let(:php_packages) { Constants::PHP72_PACKAGES }
     let(:apache_php_mod) { 'php7_module' }
     let(:ubuntu_version) { '16.04' }
