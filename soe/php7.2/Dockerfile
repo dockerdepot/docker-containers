@@ -3,13 +3,7 @@ FROM dockerdepot/php:7.2
 
 # Install all packages.
 RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install socat ssmtp
-
-# Install Xdebug alpha manually
-# @TODO: Replace with `php-xdebug` once oerdnj/deb.sury.org#751 is fixed.
-RUN pecl install xdebug-beta \
-  && echo "zend_extension=xdebug.so" > /etc/php/7.2/mods-available/xdebug.ini \
-  && phpenmod -s ALL xdebug
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install socat ssmtp php-xdebug
 
 # Configure socat.
 ADD ./conf/socat/start.sh /root/socat-start.sh
