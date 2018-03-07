@@ -1,5 +1,5 @@
 # Base for most of the Docker containers here.
-FROM chinthakagodawita/ubuntu:14.04
+FROM dockerdepot/ubuntu:14.04
 
 # Increment this to trigger a full rebuild.
 ENV DC_BASE_VERSION 'ubuntu-14.04-3.0.11'
