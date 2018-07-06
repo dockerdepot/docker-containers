@@ -1,7 +1,7 @@
 FROM centos:7
 
 # Increment this to trigger a full rebuild.
-ENV DC_BASE_VERSION 'CentOS-7-1.0.4'
+ENV DC_BASE_VERSION 'CentOS-7-1.0.5'
 
 RUN yum -y --setopt=tsflags=nodocs update
 
